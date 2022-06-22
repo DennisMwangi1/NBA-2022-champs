@@ -33,6 +33,7 @@ body{
     
 }
 #dropdown{
+    
     font-size: 25px;
     padding-top: 70px;
     padding-bottom: 0%;
@@ -63,6 +64,7 @@ body{
 #sect2{
     display: flex;
     padding-left: 20px;
+    position: relative;
 }
 #aboutPlayer{
     width: 25%;
@@ -93,12 +95,12 @@ body{
     border-bottom: 2px solid rgba(12, 113, 229, 0.603);
 }
 .height{
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light Two', cursive;
     font-size: 25px;
     opacity: 0.8;
 }
 .weight{
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light Two', cursive;
     font-size: 25px;
     opacity: 0.8;
 }
@@ -123,12 +125,13 @@ body{
     display: flex;
     justify-content: space-around;
 }
+
 /* styling for sect3 */
 #sect3{
     padding-left: 20px;
     background-color: rgba(75, 74, 74, 0.531);
     padding-top: 20px;
-    margin-top: 50px;
+    margin-top: -3.5px;
     
 }
 #sect3>div>h4{
