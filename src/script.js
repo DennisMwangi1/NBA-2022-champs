@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     let playerNumber = document.getElementById('Num')
     let playerPosition = document.getElementById('position')
     let playerImage = document.getElementById('imageOfPlayer')
+    let likeCounter = document.getElementById('likeCounter')
+    let count = 0
+    likeCounter.innerText = count
+    let liker = document.getElementById('liker')
+    liker.style.cursor = 'pointer'
+
 
     // players
     const curry = document.getElementById('stephenCurry')
@@ -234,7 +240,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         careerBPG.innerText = 0.6
     })
 
+    liker.addEventListener('click',(e)=>{
+        e.preventDefault
+        count++
+        likeCounter.innerText = count
+        liker.style.color = 'red'
 
-    
+    })
+
+    let comments = document.getElementById('comments')
+   
 
 })
