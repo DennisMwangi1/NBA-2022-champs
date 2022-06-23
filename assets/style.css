@@ -110,7 +110,7 @@ body{
 }
 
 #playerInfo>p>span{
-    padding-left: 50px;
+    padding-left: 30px;
     font-size: 20px;
     font-family: 'Bilbo Swash Caps', cursive;
     font-weight: 900;
@@ -156,6 +156,7 @@ body{
     letter-spacing: 1px;
     padding: 7px;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 /* styling for sect3 */
 #sect3{
