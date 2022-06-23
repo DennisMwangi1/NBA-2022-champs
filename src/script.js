@@ -249,6 +249,18 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
 
     let comments = document.getElementById('comments')
+    let form = document.getElementById('form')
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        let userInput = document.getElementById('input').value
+        let addComment = document.createElement('li')
+        addComment.innerText = userInput
+        addComment.style.fontFamily = 'Bilbo Swash Caps', 'cursive';
+        addComment.style.listStyle = 'none'
+        addComment.style.fontSize = '25px'
+        comments.appendChild(addComment)
+        form.reset()
+    })
    
 
 })

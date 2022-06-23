@@ -137,6 +137,8 @@ body{
 /* sect2 likesAndComments */
 #likeCounter{
     font-size: 35px;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
 }
 #liker{
     font-size: 25px;
