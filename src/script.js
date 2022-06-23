@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.src = './assets/images/steph.png'
         playerImage.style.height = '650px'
         playerImage.style.width = '400px'
+
+        fetch("https://nba-players.herokuapp.com/players-stats/curry/stephen")
+        .then((res)=>res.json())
+        .then((playerData)=>{
+            
+        })
     })
 
 
@@ -105,5 +111,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.style.height = '650px'
         playerImage.style.width = '500px'
     })
+
+
+    
 
 })
