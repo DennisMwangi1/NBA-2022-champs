@@ -17,6 +17,24 @@ document.addEventListener('DOMContentLoaded',()=>{
     const iguodala = document.getElementById('andreIguodala')
     const draymond = document.getElementById('draymondGreen')
     const wiggins = document.getElementById('andrewWiggins')
+    // stats
+    let postMPG = document.getElementById('postMPG')
+    let postFG = document.getElementById('postFG')
+    let post3PT = document.getElementById('post3PT')
+    let postFT = document.getElementById('postFT')
+    let postPPG = document.getElementById('postPPG')
+    let postRPG = document.getElementById('postRPG')
+    let postAPG = document.getElementById('postAPG')
+    let postBPG = document.getElementById('postBPG')
+    let careerMPG = document.getElementById('careerMPG')
+    let careerFG = document.getElementById('careerFG')
+    let career3PT = document.getElementById('career3PT')
+    let careerFT = document.getElementById('careerFT')
+    let careerPPG = document.getElementById('careerPPG')
+    let careerRPG = document.getElementById('careerRPG')
+    let careerAPG = document.getElementById('careerAPG')
+    let careerBPG = document.getElementById('careerBPG')
+   
 
 
 
@@ -39,8 +57,24 @@ document.addEventListener('DOMContentLoaded',()=>{
         fetch("https://nba-players.herokuapp.com/players-stats/curry/stephen")
         .then((res)=>res.json())
         .then((playerData)=>{
-            
+            postMPG.textContent =  playerData.minutes_per_game
+            postFG.textContent = playerData.field_goal_percentage
+            post3PT.textContent =  playerData.three_point_percentage
+            postFT .textContent = playerData.free_throw_percentage
+            postPPG.textContent =  playerData.points_per_game
+            postRPG.textContent =  playerData.rebounds_per_game
+            postAPG.textContent =  playerData.assists_per_game
+            postBPG.textContent =  playerData.blocks_per_game
         })
+
+        careerMPG.innerText = 33
+        careerFG.innerText =  52
+        career3PT.innerText = 42
+        careerFT.innerText = 93.5
+        careerPPG.innerText =  28.2
+        careerRPG.innerText = 5.2
+        careerAPG.innerText = 7.1
+        careerBPG.innerText = 0.1
     })
 
 
@@ -59,6 +93,29 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.src = './assets/images/klay.png'
         playerImage.style.height = '650px'
         playerImage.style.width = '400px'
+
+        fetch("https://nba-players.herokuapp.com/players-stats/thompson/klay")
+        .then((res)=>res.json())
+        .then((playerData)=>{
+            postMPG.textContent =  playerData.minutes_per_game
+            postFG.textContent = playerData.field_goal_percentage
+            post3PT.textContent =  playerData.three_point_percentage
+            postFT .textContent = playerData.free_throw_percentage
+            postPPG.textContent =  playerData.points_per_game
+            postRPG.textContent =  playerData.rebounds_per_game
+            postAPG.textContent =  playerData.assists_per_game
+            postBPG.textContent =  playerData.blocks_per_game
+        })
+
+        careerMPG.innerText = '33:45'
+        careerFG.innerText =  50
+        career3PT.innerText = 44
+        careerFT.innerText = 86
+        careerPPG.innerText =  19
+        careerRPG.innerText = 4.3
+        careerAPG.innerText = 2.2
+        careerBPG.innerText = 0.3
+        
     })
 
     iguodala.addEventListener('click',(e)=>{
@@ -76,6 +133,27 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.src = './assets/images/iguodala.png'
         playerImage.style.height = '650px'
         playerImage.style.width = '400px'
+
+        fetch("https://nba-players.herokuapp.com/players-stats/iguodala/andre")
+        .then((res)=>res.json())
+        .then((playerData)=>{
+            postMPG.textContent =  playerData.minutes_per_game
+            postFG.textContent = playerData.field_goal_percentage
+            post3PT.textContent =  playerData.three_point_percentage
+            postFT .textContent = playerData.free_throw_percentage
+            postPPG.textContent =  playerData.points_per_game
+            postRPG.textContent =  playerData.rebounds_per_game
+            postAPG.textContent =  playerData.assists_per_game
+            postBPG.textContent =  playerData.blocks_per_game
+        })
+        careerMPG.innerText = '25:40'
+        careerFG.innerText =  43
+        career3PT.innerText = 22
+        careerFT.innerText = 62
+        careerPPG.innerText =  6.1
+        careerRPG.innerText = 3.9
+        careerAPG.innerText = 3.3
+        careerBPG.innerText = 0.6
     })
 
     draymond.addEventListener('click',(e)=>{
@@ -93,6 +171,28 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.src = './assets/images/draymond.png'
         playerImage.style.height = '650px'
         playerImage.style.width = '400px'
+
+        fetch("https://nba-players.herokuapp.com/players-stats/green/draymond")
+        .then((res)=>res.json())
+        .then((playerData)=>{
+            postMPG.textContent =  playerData.minutes_per_game
+            postFG.textContent = playerData.field_goal_percentage
+            post3PT.textContent =  playerData.three_point_percentage
+            postFT .textContent = playerData.free_throw_percentage
+            postPPG.textContent =  playerData.points_per_game
+            postRPG.textContent =  playerData.rebounds_per_game
+            postAPG.textContent =  playerData.assists_per_game
+            postBPG.textContent =  playerData.blocks_per_game
+        })
+
+        careerMPG.innerText = '31:20'
+        careerFG.innerText =  45
+        career3PT.innerText = 30
+        careerFT.innerText = 76
+        careerPPG.innerText =  11.3
+        careerRPG.innerText = 7.5
+        careerAPG.innerText = 7.2
+        careerBPG.innerText = 1.5
     })
 
     wiggins.addEventListener('click',(e)=>{
@@ -110,6 +210,28 @@ document.addEventListener('DOMContentLoaded',()=>{
         playerImage.src = './assets/images/wiggins.png'
         playerImage.style.height = '650px'
         playerImage.style.width = '500px'
+
+        fetch("https://nba-players.herokuapp.com/players-stats/wiggins/andrew")
+        .then((res)=>res.json())
+        .then((playerData)=>{
+            postMPG.textContent =  playerData.minutes_per_game
+            postFG.textContent = playerData.field_goal_percentage
+            post3PT.textContent =  playerData.three_point_percentage
+            postFT .textContent = playerData.free_throw_percentage
+            postPPG.textContent =  playerData.points_per_game
+            postRPG.textContent =  playerData.rebounds_per_game
+            postAPG.textContent =  playerData.assists_per_game
+            postBPG.textContent =  playerData.blocks_per_game
+        })
+
+        careerMPG.innerText = 35.1
+        careerFG.innerText =  42
+        career3PT.innerText = 29.8
+        careerFT.innerText = 61.7
+        careerPPG.innerText =  16.5
+        careerRPG.innerText = 3.9
+        careerAPG.innerText = 1.6
+        careerBPG.innerText = 0.6
     })
 
 
