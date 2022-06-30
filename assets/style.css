@@ -191,3 +191,14 @@ body{
     display: flex;
     justify-content: space-around;
 }
+/* styling for sect4 */
+#sect4{
+    padding-top: 50px;
+    text-align: center;
+}
+#userInputPlayer{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-left: 100px;
+}

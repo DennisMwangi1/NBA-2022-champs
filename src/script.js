@@ -220,6 +220,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         fetch("https://nba-players.herokuapp.com/players-stats/wiggins/andrew")
         .then((res)=>res.json())
         .then((playerData)=>{
+            console.log(playerData.name);
+            
             postMPG.textContent =  playerData.minutes_per_game
             postFG.textContent = playerData.field_goal_percentage
             post3PT.textContent =  playerData.three_point_percentage
