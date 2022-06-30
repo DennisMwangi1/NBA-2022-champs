@@ -40,6 +40,15 @@ document.addEventListener('DOMContentLoaded',()=>{
     let careerRPG = document.getElementById('careerRPG')
     let careerAPG = document.getElementById('careerAPG')
     let careerBPG = document.getElementById('careerBPG')
+
+    let playerMPG = document.getElementById('playerMPG')
+    let playerFG = document.getElementById('playerFG')
+    let player3PT = document.getElementById('player3PT')
+    let playerFT = document.getElementById('playerFT')
+    let playerPPG = document.getElementById('playerPPG')
+    let playerRPG = document.getElementById('playerRPG')
+    let playerAPG = document.getElementById('playerAPG')
+    let playerBPG = document.getElementById('playerBPG')
    
 
 
@@ -263,6 +272,39 @@ document.addEventListener('DOMContentLoaded',()=>{
         comments.appendChild(addComment)
         form.reset()
     })
-   
 
+    let inputFirstName = document.getElementById('inputFirstName')
+    let inputLastName = document.getElementById('inputLastName')
+    let userForm = document.getElementById('userForm')
+    userForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+       if (inputFirstName.value === '' ) {
+           alert('Add first name')
+           
+       }else if (inputLastName.value === '') {
+           alert('Add last name')
+       }else{
+           fetch(`https://nba-players.herokuapp.com/players-stats/${inputLastName.value}/${inputFirstName.value}`)
+           .then((res)=>res.json())
+           .then((data)=>{
+            playerMPG.textContent =  data.minutes_per_game
+            playerFG.textContent =   `${data.field_goal_percentage}%`
+            player3PT.textContent =  `${data.three_point_percentage}%`
+            playerFT .textContent =  `${data.free_throw_percentage}%`
+            playerPPG.textContent =  data.points_per_game
+            playerRPG.textContent =  data.rebounds_per_game
+            playerAPG.textContent =  data.assists_per_game
+            playerBPG.textContent =  data.blocks_per_game
+           })
+           .catch(()=>{
+               alert(`Im sorry.This player is not in our database.Try another Player`)
+           })
+            let newImage = document.getElementById('playerInputImage')
+            newImage.src = `https://nba-players.herokuapp.com/players/${inputLastName.value}/${inputFirstName.value}`
+            userForm.reset()
+       }
+       
+
+        
+    })
 })
